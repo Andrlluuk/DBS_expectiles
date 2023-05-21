@@ -1685,7 +1685,7 @@ def make_plots(ordered_data, output_file_path, distribution_name, real_parameter
     else:
         indices_to_plot_sh = np.where((k_sh_arr <= max_k) & (k_sh_arr >= min_k))
     axes[1,0].set_xlabel(r"Number of Order Statistics $\kappa$", fontsize = 20)
-    axes[1,0].set_ylabel(r"Estimated $\hat{\xi}$", fontsize = 20)    
+    axes[1,0].set_ylabel(r"Estimated $\hat{\gamma}$", fontsize = 20)
     # plot smooth Hill
     
     axes[1,0].plot(k_sh_arr[indices_to_plot_sh], xi_sh_arr[indices_to_plot_sh],
@@ -1719,7 +1719,7 @@ def make_plots(ordered_data, output_file_path, distribution_name, real_parameter
 
     
     axes[1,1].set_xlabel(r"Number of Order Statistics $\kappa$", fontsize = 20)
-    axes[1,1].set_ylabel(r"Estimated $\hat{\xi}$", fontsize = 20) 
+    axes[1,1].set_ylabel(r"Estimated $\hat{\gamma}$", fontsize = 20)
     axes[1,1].set_xscale("log")   
     
     # plot smooth Hill
@@ -1747,7 +1747,7 @@ def make_plots(ordered_data, output_file_path, distribution_name, real_parameter
     axes[1,1].legend(loc = "best")
 
     axes[2,0].set_xlabel(r"Number of Order Statistics $\kappa$", fontsize = 20)
-    axes[2,0].set_ylabel(r"Estimated $\hat{\xi}$", fontsize = 20)
+    axes[2,0].set_ylabel(r"Estimated $\hat{\gamma}$", fontsize = 20)
     #plot Pickands
     min_k_index = (np.abs(k_p_arr - min_k)).argmin()
     max_k_index = (np.abs(k_p_arr - max_k)).argmin()
@@ -1832,7 +1832,7 @@ def make_plots(ordered_data, output_file_path, distribution_name, real_parameter
     print("!!!!!!!!!!!!!!!", real_parameter)
 
     axes[2,1].set_xlabel(r"Number of Order Statistics $\kappa$", fontsize = 20)
-    axes[2,1].set_ylabel(r"Estimated $\hat{\xi}$", fontsize = 20)
+    axes[2,1].set_ylabel(r"Estimated $\hat{\gamma}$", fontsize = 20)
     axes[2,1].set_xscale("log")
 
     #plot Pickands
